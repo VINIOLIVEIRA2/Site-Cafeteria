@@ -1,6 +1,6 @@
 :root {
     --main-color: #d3ad7f;
-    --black: #13131a;
+    --black: #000000;
     --bg: #010103;
     --border: 0.1rem solid rgba(255, 255, 255, 0.3);
     font-size: 10px;
@@ -20,12 +20,81 @@
 
 body {
     background: var(--bg);
-   }
+}
 
 section {
     padding: 3rem 2rem;
     margin: 0 auto;
     max-width: 1200px;
+}
+
+.home-content {
+    text-transform: none;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('Img/home-img.jpg') no-repeat center;
+    background-size: cover;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 10rem;
+}
+
+.home .content {
+    max-width: 52rem;
+    padding-left: 0;
+    margin-left: 30px;
+}
+
+.home .content h3 {
+    font-size: 5.2rem;
+    color: #fff;
+    line-height: 1.2;
+    margin-left: 60px;
+    margin-top: -90px;
+}
+
+.home .content p {
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 1.7;
+    margin: 1.2rem 0 2rem;
+    margin-left: 60px;
+}
+
+@media (max-width: 900px) {
+    .home {
+        padding-top: 8rem;
+    }
+
+    .home-content {
+        background-position: 70% center;
+    }
+
+    .home .content h3 {
+        font-size: 3.8rem;
+    }
+
+    .home .content p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .home {
+        padding-top: 7rem;
+    }
+
+    .home-content {
+        min-height: 80vh;
+        background-position: 65% center;
+    }
+
+    .home .content h3 {
+        font-size: 3.2rem;
+    }
 }
 
 .header {
@@ -35,31 +104,33 @@ section {
     right: 0;
     z-index: 99;
     border-bottom: var(--border);
+    background: var(--bg);
 }
 
 .header section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 0.8rem;
+    padding-bottom: 3rem;
 
 }
-.navbar  {
-font-size: 1.8rem;   
-display: flex;
-flex: 1;
-justify-content: center;
-gap: 2rem;
-margin-top: -1.4rem;
-color: #fff
 
+.navbar {
+    font-size: 1.8rem;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 0;
+    color: #fff
 }
 
 .navbar a {
-   margin: 0;
-   font-size: 1.8rem;
-   color: #fff;
+    margin: 0;
+    font-size: 1.8rem;
+    color: #fff;
 }
 
 .navbar a:hover {
@@ -73,12 +144,126 @@ color: #fff
     display: flex;
     align-items: center;
     gap: 1rem;
+    cursor: pointer;
 }
 
-.icons img {
-    width: 25px !important;
-    height: 25px !important;
+.icons .icon {
+    width: 25px;
+    height: 25px;
     margin: 0.2rem;
     cursor: pointer;
     object-fit: contain;
+    display: block;
+}
+
+.icons .icon:hover {
+    transform: scale(1.3);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2.2rem;
+    background: #c89b6a;
+    color: #fff;
+    font-size: 1.4rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-left: 60px;
+}
+
+.about .btn {
+    margin: 1.6rem 0 0;
+    align-self: flex-start;
+}
+.logo {
+    margin-left: 120px;
+    margin-top: 0;
+}
+
+.logo img {
+    width: 85px;
+    height: auto;
+    display: block;
+}
+
+.footer {
+    margin-top: 4rem;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    color: #fff;
+    border-top: var(--border);
+}
+
+.about {
+    background: var(--bg);
+    color: #fff;
+    padding: 6rem 2rem;
+}
+
+.about .heading {
+    text-align: center;
+    color: #fff;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+}
+
+.about .heading span {
+    color: var(--main-color);
+}
+
+.about .row {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    flex-wrap: nowrap;
+    background: #1b1b1b;
+    padding: 0;
+    border-radius: 0.6rem;
+    min-height: 32rem;
+}
+
+.about .container-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.about .container-image {
+    flex: 1 1 50%;
+    max-width: none;
+    overflow: hidden;
+    display: flex;
+}
+
+.about .content {
+    flex: 1 1 50%;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about .content h3 {
+    font-size: 2.6rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.about .content p {
+    font-size: 1.6rem;
+    color: #fff;
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+}
+
+@media (max-width: 900px) {
+    .about .row {
+        flex-wrap: wrap;
+    }
+
+    .about .content {
+        padding: 2rem;
+    }
 }

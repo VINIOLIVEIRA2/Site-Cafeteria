@@ -1,37 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title> Café </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>Café</title>
 </head>
 
 <body>
     <header class="header">
         <section>
-        <a href="#" class="logo">
-            <img src="/Img/logo.png" alt="logo">
-            <link rel="preconnect" href="https://fonts.googleapis.com">
-            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-            <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        </a>
+            <a href="#" class="logo">
+                <img src="Img/logo.png" alt="Logo da cafeteria">
+            </a>
 
-        <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#About">Sobre</a>
-            <a href="#menu">Menu</a>
-            <a href="#review">Avaliações</a>
-            <a href="#address">Endereço</a>
-        </nav>
+            <nav class="navbar">
+                <a href="#home">Home</a>
+                <a href="#about">Sobre</a>
+                <a href="#menu">Menu</a>
+                <a href="#review">Avaliações</a>
+                <a href="#address">Endereço</a>
+            </nav>
 
-        <div class="icons">
-            <img src="https://img.icons8.com/?size=100&id=7695&format=png&color=ffffff" alt="Icons">
-            <img src="https://img.icons8.com/ios-glyphs/30/ffffff/shopping-cart--v1.png" alt="cart">
-        </div>
+            <div class="icons">
+                <img class="icon" src="https://img.icons8.com/?size=25&id=7695&format=png&color=ffffff" alt="Buscar" width="25" height="25" style="cursor: pointer;">
+                <img class="icon" src="https://img.icons8.com/ios-glyphs/25/ffffff/shopping-cart--v1.png" alt="Carrinho" width="25" height="25" style="cursor: pointer;">
+            </div>
         </section>
     </header>
+
+    <div class="home-content">
+        <section id="home" class="home">
+            <div class="content">
+                <h3> CODE COM O MELHOR CAFÉ </h3>
+                <p>“Programar é passar horas tentando entender por que algo não funciona, até perceber que a resposta sempre esteve ali — entre uma linha de código mal escrita e uma xícara de café que já esfriou.”</p>
+                <a href="#" class="btn">Pegue o seu agora</a>
+            </div>
+        </section>
+    </div>
+
+    <section class="about" id="about">
+        <h2 class="heading"> Sobre <span>Nós</span> </h2>
+        <div class="row">
+            <div class="container-image">
+                <img src="Img/about-img.jpg" alt="Sobre-nós">
+            </div>
+            <div class="content">
+                <h3>Por que escolher nosso café?</h3>
+                <p>Nós nos dedicamos a oferecer a melhor experiência em café, combinando grãos de alta qualidade com técnicas de preparo excepcionais. Nossa paixão pelo café é refletida em cada xícara que servimos.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis vero officia velit quas, ratione fuga, soluta ipsum ex illum quo voluptate? In quas deleniti, consequatur consequuntur sit pariatur debitis commodi?</p>
+                <a href="#" class="btn">Saiba mais</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" id="footer">
+        <p>© 2026 Café. Todos os direitos reservados.</p>
+    </footer>
 </body>
 
 </html>
