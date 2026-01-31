@@ -195,6 +195,27 @@ section {
     border-top: var(--border);
 }
 
+.footer .share {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+
+.footer .share img {
+    width: 30px;
+    height: 30px;
+    display: block;
+    border-radius: 50%;
+    padding: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.footer .share img:hover {
+    cursor: pointer;
+    border-color: var(--main-color);
+}
+
 .about {
     background: var(--bg);
     color: #fff;
@@ -206,9 +227,22 @@ section {
     color: #fff;
     font-size: 4rem;
     margin-bottom: 3rem;
+    text-transform: uppercase;
 }
 
 .about .heading span {
+    color: var(--main-color);
+}
+
+.title {
+    text-align: center;
+    color: #fff;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+}
+
+.title span {
     color: var(--main-color);
 }
 
@@ -267,3 +301,113 @@ section {
         padding: 2rem;
     }
 }
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.menu .box {
+    text-align: center;
+    padding: 2.5rem;
+    border: var(--border);
+    background: transparent;
+}
+
+.menu .box .btn {
+    margin: 1.2rem 0 0;
+    margin-left: 0;
+    margin-right: 0;
+    display: inline-block;
+}
+
+.menu .box img {
+    height: 10rem;
+}
+
+.menu .box h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box .price {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.menu .box .price span {
+    font-size: 1.1rem;
+    text-decoration: line-through;
+    font-weight: 300;
+    color: #aaa;
+}
+
+.menu .box:hover {
+    background: #fff;
+}
+
+.menu .box:hover h3,
+.menu .box:hover .price {
+    color: #000;
+}
+
+.menu .box:hover .price span {
+    color: #555;
+}
+
+.reviews .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.reviews .box {
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+    background: transparent;
+}
+
+.reviews .box p {
+    color: #aaa;
+    font-size: 1.5rem;
+    line-height: 1.7;
+    padding: 1rem 0 2rem;
+}
+
+.reviews .box h3 {
+    color: #fff;
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+.reviews .box > img {
+    display: block;
+    margin: 1.5rem auto;
+}
+
+.reviews .stars img {
+    margin: 0 0.2rem;
+}
+
+.reviews .stars {
+    text-align: center;
+}
+
+.reviews .stars img {
+    display: inline-block;
+}
+
+.address iframe {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    height: 420px;
+    margin: 0 auto;
+    border: 0;
+}
+
+
+/* removido: regras duplicadas que invertiam o tamanho dos preços */
